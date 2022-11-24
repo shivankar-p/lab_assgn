@@ -6,23 +6,24 @@ from palindrome import palindrome
 
 class Calculator(unittest.TestCase):
 
-    def is_substr(self):
+    def test_is_substr(self):
         str = "abcd"
         sub_str = "abc"
         result = check(str, sub_str)
         self.assertEqual(result, 1)
     
-    def not_substr(self):
+    def test_not_substr(self):
         str = "abcd"
         sub_str = "cda"
         result = check(str, sub_str)
         self.assertEqual(result, -1)
     
-    def pal(self):
+    def test_pal(self):
         str = "aba"
         result = palindrome(str)
         self.assertEqual(result, True)
-    def not_pal(self):
+
+    def test_pal(self):
         str = "abc"
         result = palindrome(str)
         self.assertEqual(result, False)
