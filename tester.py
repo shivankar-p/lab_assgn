@@ -10,7 +10,7 @@ class Calculator(unittest.TestCase):
         str = "abcd"
         sub_str = "abc"
         result = check(str, sub_str)
-        self.assertEqual(result, 0)
+        self.assertEqual(result, 1)
     
     def not_substr(self):
         str = "abcd"
