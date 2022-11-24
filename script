@@ -1,0 +1,28 @@
+pipeline { 
+    agent any
+    stages {
+        stage('Cloning repo') {
+            steps {
+                git 'https://github.com/shivankar-p/lab_assgn'
+            }
+        }
+        stage('substring build') {
+            steps {
+                sh "chmod u+x substring.py"
+                sh "./substring.py"
+            }
+        }
+        stage('palindrome build'){
+            steps {
+                sh "chmod u+x palindrome.py"
+                sh "./palindrome.py"
+            }
+        }
+        stage('Tester') {
+            steps {
+                sh "chmod u+x tester.py"
+                sh "./tester.py"
+            }
+        }
+    } 
+}
