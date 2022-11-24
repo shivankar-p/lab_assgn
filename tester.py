@@ -16,7 +16,7 @@ class Calculator(unittest.TestCase):
         str = "abcd"
         sub_str = "cda"
         result = check(str, sub_str)
-        self.assertEqual(result, 6)
+        self.assertEqual(result, 1)
     
     def test_pal(self):
         str = "aba"
