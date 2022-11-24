@@ -10,13 +10,13 @@ class Calculator(unittest.TestCase):
         str = "abcd"
         sub_str = "abc"
         result = check(str, sub_str)
-        self.assertEqual(result, 1)
+        self.assertEqual(result, 0)
     
     def test_not_substr(self):
         str = "abcd"
         sub_str = "cda"
         result = check(str, sub_str)
-        self.assertEqual(result, 1)
+        self.assertEqual(result, -1)
     
     def test_pal(self):
         str = "aba"
